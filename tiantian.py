@@ -11,9 +11,12 @@ freq = {}
 usersDict = {}
 itchat.auto_login(enableCmdQR=2,hotReload=True)
 itchat.get_chatrooms(update=True)
-v0= u"您好，北美万群汇总😊天天😊为您服务～\n"
-v1= u"回复 1 加北美各大总群:刷题面试竞赛、剁手、信用卡爱好者、美食、健身;\n"
-vT =v0+v1
+v0= u"您好，😊UIUC加群建群小助手😊为您服务～\n"
+v1= u"回复 1 加UIUC会计、经济、ECE大家庭;\n"
+v2= u"回复 2 加UIUC工学、商学、文理学毕业通讯录;\n"
+v3= u"回复 3 加UIUC ECE、CS找队友群;\n"
+v4= u"回复 4 加UIUC功能群群:刷题面试;\n"
+vT =v0+v1+v2+v3+v4
 #Chaoran userid:@ef633e828340000b5518a18f66daefbf8f307a1fa96d405288a885014d8c25d5
 #汪灵欣 userid:@eb21513f32b62cd9773abc2fd5531ee05ca09af4ca926fbf896d8c89f29e46cc
 #groups= {'@@6cdcfcb7dc00e7d546464ba702151143e1bf4aa9f72aa6e2559b86469e9a2481':'天天VIP','@@0515f86f31ec80ce4d4238a9ada8fdc0dd0900cc017f87c17df8ee49fb6d4663':'雷孙王'}
@@ -38,7 +41,7 @@ def add_friend(msg):
     #print(json.dumps(msg))
     #msg.user.verify()
     #itchat.add_friend(**msg['Text']) # 该操作会自动将新好友的消息录入，不需要重载通讯录
-    itchat.add_friend(userName = msg['RecommendInfo']['UserName'], status=3, verifyContent=u'北美万群汇总', autoUpdate=True)
+    itchat.add_friend(userName = msg['RecommendInfo']['UserName'], status=3, verifyContent=u'UIUC万群汇总', autoUpdate=True)
     #msg.user.send(vT)
     itchat.send_msg(vT, msg['RecommendInfo']['UserName'])
 
@@ -70,32 +73,25 @@ def tuling_reply(msg):
     print("userid:"+CurUserName+"\n") 
     if(CurUserName in usersDict):
         usersDict[CurUserName] = usersDict[CurUserName] + 1
-        if(usersDict[CurUserName] >= 9):
+        if(usersDict[CurUserName] >= 7):
             itchat.send_msg(u'您已达到今日加群上限，请明日再来～😊天天😊', CurUserName)
             return
     else:
         usersDict[CurUserName] = 1
     msgText = msg['Text']
     if "1" in msgText:
-        pullMembersMore(msg, u'天天刷题', CurUserName) #1_0
-        #pullMembersMore(msg, u'天天剁手', CurUserName) #1_1
-        r = itchat.send('@img@1_1.jpg', CurUserName) #1_1
-        pullMembersMore(msg, u'天天refer信用卡', CurUserName) #1_2
-        #pullMembersMore(msg, u'天天美食', CurUserName) #1_3
-        r = itchat.send('@img@1_3.jpg', CurUserName) #1_3
-        pullMembersMore(msg, u'天天健身', CurUserName) #1_4
-        #pullMembersMore(msg, u'天天Hao羊毛', CurUserName) #1_5
-        r = itchat.send('@img@1_5.jpg', CurUserName) #1_5
-    elif "2a" in msgText:
-        #pullMembersMore(msg, u'UIUC2017工学院毕业通讯录', CurUserName) #2a_0
-        r = itchat.send('@img@2a_0.jpg', CurUserName) #2a_0
-        pullMembersMore(msg, u'UIUC ECE大家庭', CurUserName) #2a_1
-        #pullMembersMore(msg, u'UIUC CS125', CurUserName) #2a_2
-        r = itchat.send('@img@2a_2.jpg', CurUserName) #2a_2
-        pullMembersMore(msg, u'UIUC CS找队友资料分享', CurUserName) #2a_3
-        #pullMembersMore(msg, u'UIUC CS461', CurUserName) #2a_4
-        #pullMembersMore(msg, u'UIUC 2017 新生群', CurUserName) #2a_4
-        r = itchat.send('@img@2a_4.jpg', CurUserName) #2a_4
+        pullMembersMore(msg, u'UIUC2017会计系大家庭', CurUserName)
+        pullMembersMore(msg, u'UIUC2017经济系大家庭', CurUserName)
+        pullMembersMore(msg, u'UIUC ECE大家庭', CurUserName)
+    elif "2" in msgText:
+        pullMembersMore(msg, u'UIUC2017商学院毕业通讯录', CurUserName)
+        pullMembersMore(msg, u'UIUC2017工学院毕业通讯录', CurUserName)
+        pullMembersMore(msg, u'UIUC2017文理学院毕业通讯录', CurUserName)
+    elif "3" in msgText:
+        pullMembersMore(msg, u'UIUC ECE找队友', CurUserName)
+        pullMembersMore(msg, u'UIUC CS找队友2', CurUserName)
+    elif "4" in msgText:
+        pullMembersMore(msg, u'UIUC CS刷题小分队', CurUserName)
     else:
         itchat.send_msg(vT, CurUserName)
 
