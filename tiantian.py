@@ -103,8 +103,18 @@ def pullMembersMore(msg, chatroomName, CurUserName):
     #print(CurUserName+ "\n")
     r = itchat.add_member_into_chatroom(chatRoomUserName,[{'UserName':CurUserName}],useInvitation=True)
 
-@itchat.msg_register([TEXT, SHARING], isGroupChat=True)
+#@itchat.msg_register([TEXT, SHARING], isGroupChat=True)
+@itchat.msg_register(TEXT, isGroupChat=True)
 def text_reply(msg):
+    msgS = msg.text
+    '''
+    print(msg['isAt'])
+    print(msg['ActualNickName'])
+    print(msg['Content'])
+    '''
+    if "@UIUC加群建群小助手" in msg['Content']:
+        replyS = get_response(msgS)
+        msg.user.send(u'@%s\u2005%s' % (msg.actualNickName, replyS+'~想进群加我😊'))
     '''  
     if not msg.isAt:
         groudIDOrigin = msg['FromUserName']
@@ -125,10 +135,6 @@ def text_reply(msg):
             print("groundID"+str(groudID)+ "\n")
             print("frequency"+ str(freq[groudID])+ "\n")
     '''
-    if msg.isAt:
-        msgS = msg.text
-        replyS = get_response(msgS)
-        msg.user.send(u'@%s\u2005%s' % (msg.actualNickName, replyS+'~想进群加我😊'))
         #if((' ' in msgS) == True):
         #msgS = msgS.split(' ', 1)[1]
         
@@ -183,11 +189,12 @@ def group_reply_media(msg):
                 itchat.send('%s: %s:' % (groups[source], msg['ActualNickName']), item)
                 itchat.send('@%s@%s' % ({'Picture': 'img', 'Video': 'vid'}.get(msg['Type'], 'fil'), msg['FileName']), item)
 '''
-
+'''
 def updateChatroom(chatroomName):
     cur_chatrooms = itchat.search_chatrooms(name=u'UIUC租房3群')
     detailedChatroom = itchat.update_chatroom(cur_chatrooms[0]['UserName'], detailedMember=False)
     #print(json.dumps(detailedChatroom )+"\n")
+'''
 
 
 
