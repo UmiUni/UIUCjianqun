@@ -44,6 +44,7 @@ def add_friend(msg):
     itchat.add_friend(**msg['Text'])
     #itchat.add_friend(userName = msg['RecommendInfo']['UserName'], status=3, verifyContent=u'UIUC万群汇总', autoUpdate=True)
     #msg.user.send(vT)
+    #response = itchat.add_friend(userName = CurUserName, status=3, autoUpdate=True)
     itchat.send_msg(vT, msg['RecommendInfo']['UserName'])
 
 def get_response(msg):
@@ -69,7 +70,6 @@ def get_response(msg):
 @itchat.msg_register(itchat.content.TEXT)
 def tuling_reply(msg):
     CurUserName = msg['FromUserName']
-    #response = itchat.add_friend(userName = CurUserName, status=3, autoUpdate=True)
     #print(json.dumps(response)+"\n")
     print("userid:"+CurUserName+"\n") 
     if(CurUserName in usersDict):
