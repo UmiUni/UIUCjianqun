@@ -15,7 +15,7 @@ v0= u"您好，😊UIUC加群建群小助手😊为您服务～\n"
 v1= u"回复 1 加UIUC会计、经济、ECE大家庭;\n"
 v2= u"回复 2 加UIUC工学、商学、文理学毕业通讯录;\n"
 v3= u"回复 3 加UIUC ECE、CS找队友群;\n"
-v4= u"回复 4 加UIUC功能群:刷题面试;暑期留守儿童.\n"
+v4= u"回复 4 加UIUC功能群:刷题面试;暑期留守儿童;食神带飞。\n"
 vT =v0+v1+v2+v3+v4
 #Chaoran userid:@ef633e828340000b5518a18f66daefbf8f307a1fa96d405288a885014d8c25d5
 #汪灵欣 userid:@eb21513f32b62cd9773abc2fd5531ee05ca09af4ca926fbf896d8c89f29e46cc
@@ -41,7 +41,8 @@ def add_friend(msg):
     #print(json.dumps(msg))
     #msg.user.verify()
     #itchat.add_friend(**msg['Text']) # 该操作会自动将新好友的消息录入，不需要重载通讯录
-    itchat.add_friend(userName = msg['RecommendInfo']['UserName'], status=3, verifyContent=u'UIUC万群汇总', autoUpdate=True)
+    itchat.add_friend(**msg['Text'])
+    #itchat.add_friend(userName = msg['RecommendInfo']['UserName'], status=3, verifyContent=u'UIUC万群汇总', autoUpdate=True)
     #msg.user.send(vT)
     itchat.send_msg(vT, msg['RecommendInfo']['UserName'])
 
@@ -68,7 +69,7 @@ def get_response(msg):
 @itchat.msg_register(itchat.content.TEXT)
 def tuling_reply(msg):
     CurUserName = msg['FromUserName']
-    response = itchat.add_friend(userName = CurUserName, status=3, autoUpdate=True)
+    #response = itchat.add_friend(userName = CurUserName, status=3, autoUpdate=True)
     #print(json.dumps(response)+"\n")
     print("userid:"+CurUserName+"\n") 
     if(CurUserName in usersDict):
@@ -93,6 +94,7 @@ def tuling_reply(msg):
     elif "4" in msgText:
         pullMembersMore(msg, u'UIUC CS刷题小分队', CurUserName)
         pullMembersMore(msg, u'17暑假香槟托儿所', CurUserName)
+        pullMembersMore(msg, u'UI食神带飞群', CurUserName)
     else:
         itchat.send_msg(vT, CurUserName)
 
