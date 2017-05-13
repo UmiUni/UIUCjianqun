@@ -11,6 +11,7 @@ freq = {}
 usersDict = {}
 itchat.auto_login(enableCmdQR=2,hotReload=True)
 itchat.get_chatrooms(update=True)
+
 v0= u"您好，😊UIUC加群建群小助手😊为您服务～\n"
 v1= u"回复 1 加UIUC会计、经济、ECE大家庭;\n"
 v2= u"回复 2 加UIUC工学、商学、文理学毕业通讯录;\n"
@@ -30,11 +31,14 @@ def getName(chatroomName):
     #print(json.dumps(cur_chatrooms)+"\n")
     return detailedChatroom["UserName"]
 
-#groups={}
+groups={}
 #groups[getName(u'天天VIP')] = u'天天VIP'
 #groups[getName(u'雷孙王')] = u'雷孙王'
 #groups[getName(u'UIUC 万能总群2')] = u'万能总群2'
 #groups[getName(u'UIUC 万能总群3')] = u'万能总群3'
+groups[getName(u'UIUC CS刷题小分队')] = u'UIUC刷题小分队'
+groups[getName(u'天天刷题')] = u'天天刷题'
+
 @itchat.msg_register('Friends')
 def add_friend(msg):
     #print("add message:")
@@ -119,6 +123,7 @@ def text_reply(msg):
         replyS = get_response(msgS)
         msg.user.send(u'@%s\u2005%s' % (msg.actualNickName, replyS+'~想进群加我😊'))
     '''  
+    ###超级广告###
     if not msg.isAt:
         groudIDOrigin = msg['FromUserName']
         groudID = groudIDOrigin[:35]
@@ -144,9 +149,8 @@ def text_reply(msg):
     	#print msgS
         #replyS = get_response(msgS) + ' ps:加我进群' 
         #msg.user.send(u'@%s\u2005I received: %s' % (msg.actualNickName, msg.text)
-		#print("New Friend:"+ json.dumps(msg))
-    '''
-    elif not msg.isAt:
+        #print("New Friend:"+ json.dumps(msg))
+    if(1==1):
         source = msg['FromUserName']
         # 处理文本消息
         #print("source:"+source)
@@ -174,9 +178,7 @@ def text_reply(msg):
                         # msg['Text']: 分享的标题
                         # msg['Url']: 分享的链接
                         itchat.send('%s: %s:\n%s\n%s' % (groups[source], msg['ActualNickName'], msg['Text'], msg['Url']), item)
-    '''
 
-'''
 # 处理图片和视频类消息
 @itchat.msg_register([PICTURE, VIDEO], isGroupChat=True)
 def group_reply_media(msg):
@@ -191,7 +193,6 @@ def group_reply_media(msg):
                 # 将图片或视频发送到其他需要同步消息的群聊
                 itchat.send('%s: %s:' % (groups[source], msg['ActualNickName']), item)
                 itchat.send('@%s@%s' % ({'Picture': 'img', 'Video': 'vid'}.get(msg['Type'], 'fil'), msg['FileName']), item)
-'''
 '''
 def updateChatroom(chatroomName):
     cur_chatrooms = itchat.search_chatrooms(name=u'UIUC租房3群')
