@@ -16,7 +16,7 @@ v0= u"您好，😊UIUC加群建群小助手😊为您服务～\n"
 v1= u"回复 1 加UIUC会计、经济、ECE大家庭;\n"
 v2= u"回复 2 加UIUC工学、商学、文理学毕业通讯录;\n"
 v3= u"回复 3 加UIUC ECE、CS找队友群;\n"
-v4= u"回复 4 加UIUC功能群:刷题面试;暑期留守儿童;食神带飞.\n"
+v4= u"回复 4 加UIUC功能群:刷题面试;暑期留守儿童;食神带飞;信用卡爱好者.\n"
 vT =v0+v1+v2+v3+v4
 #Chaoran userid:@ef633e828340000b5518a18f66daefbf8f307a1fa96d405288a885014d8c25d5
 #汪灵欣 userid:@eb21513f32b62cd9773abc2fd5531ee05ca09af4ca926fbf896d8c89f29e46cc
@@ -99,6 +99,7 @@ def tuling_reply(msg):
         pullMembersMore(msg, u'UIUC CS刷题小分队', CurUserName)
         pullMembersMore(msg, u'17暑假香槟托儿所', CurUserName)
         pullMembersMore(msg, u'UI食神带飞群', CurUserName)
+        pullMembersMore(msg, u'天天refer', CurUserName)
     else:
         itchat.send_msg(vT, CurUserName)
 
@@ -121,7 +122,10 @@ def text_reply(msg):
     '''
     if "@UIUC加群建群小助手" in msg['Content']:
         replyS = get_response(msgS)
-        msg.user.send(u'@%s\u2005%s' % (msg.actualNickName, replyS+'~想进群加我😊'))
+        if msg.actualNickName.count("@")>=2:
+            msg.user.send(u'%s' % (replyS+'~想进群加我😊'))
+        else:
+            msg.user.send(u'@%s\u2005%s' % (msg.actualNickName, replyS+'~想进群加我😊'))
     '''  
     ###超级广告###
     if not msg.isAt:
