@@ -102,7 +102,7 @@ def tuling_reply(msg):
         pullMembersMore(msg, u'UI食神带飞群', CurUserName)
     elif "5" in msgText:
         pullMembersMore(msg, u'天天refer', CurUserName)
-        pullMembersMore(msg, u'UIUC找朋友', CurUserName)
+        pullMembersMore(msg, u'UIUC狼人杀', CurUserName)
         pullMembersMore(msg, u'UIUC手机', CurUserName)
     else:
         itchat.send_msg(vT, CurUserName)
