@@ -86,20 +86,20 @@ def tuling_reply(msg):
         usersDict[CurUserName] = 1
     msgText = msg['Text']
     if "1" in msgText:
-        pullMembersMore(msg, u'UIUC2017会计系大家庭', CurUserName)
-        pullMembersMore(msg, u'UIUC2017经济系大家庭', CurUserName)
+        pullMembersMore(msg, u'UIUC2017会计系', CurUserName)
+        pullMembersMore(msg, u'UIUC2017经济系', CurUserName)
         pullMembersMore(msg, u'UIUC ECE大家庭', CurUserName)
     elif "2" in msgText:
-        pullMembersMore(msg, u'UIUC2017商学院毕业通讯录', CurUserName)
-        pullMembersMore(msg, u'UIUC2017工学院毕业通讯录', CurUserName)
-        pullMembersMore(msg, u'UIUC2017文理学院毕业通讯录', CurUserName)
+        pullMembersMore(msg, u'UIUC2017商学', CurUserName)
+        pullMembersMore(msg, u'UIUC2017工学', CurUserName)
+        pullMembersMore(msg, u'UIUC2017文理', CurUserName)
     elif "3" in msgText:
         pullMembersMore(msg, u'UIUC ECE找队友', CurUserName)
         pullMembersMore(msg, u'UIUC CS找队友2', CurUserName)
     elif "4" in msgText:
-        pullMembersMore(msg, u'UIUC CS刷题小分队', CurUserName)
-        pullMembersMore(msg, u'17暑假香槟托儿所', CurUserName)
-        pullMembersMore(msg, u'UI食神带飞群', CurUserName)
+        pullMembersMore(msg, u'UIUC CS刷题', CurUserName)
+        pullMembersMore(msg, u'17暑假', CurUserName)
+        pullMembersMore(msg, u'UI食神', CurUserName)
     elif "5" in msgText:
         pullMembersMore(msg, u'天天refer', CurUserName)
         pullMembersMore(msg, u'UIUC狼人杀', CurUserName)
