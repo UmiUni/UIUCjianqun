@@ -4,7 +4,7 @@ import itchat
 from itchat.content import *
 import sys  
 import json
-import time
+from time import sleep
 reload(sys)  
 sys.setdefaultencoding('utf8')
 freq = {}
@@ -79,7 +79,7 @@ def tuling_reply(msg):
     print("userid:"+CurUserName+"\n") 
     if(CurUserName in usersDict):
         usersDict[CurUserName] = usersDict[CurUserName] + 1
-        if(usersDict[CurUserName] >= 7):
+        if(usersDict[CurUserName] >= 10):
             itchat.send_msg(u'您已达到今日加群上限，请明日再来～😊天天😊', CurUserName)
             return
     else:
@@ -87,23 +87,37 @@ def tuling_reply(msg):
     msgText = msg['Text']
     if "1" in msgText:
         pullMembersMore(msg, u'UIUC2017会计系', CurUserName)
+        sleep(0.2)
         pullMembersMore(msg, u'UIUC2017经济系', CurUserName)
+        sleep(0.2)
         pullMembersMore(msg, u'UIUC ECE大家庭', CurUserName)
+        sleep(0.2)
     elif "2" in msgText:
         pullMembersMore(msg, u'UIUC2017商学', CurUserName)
+        sleep(0.2)
         pullMembersMore(msg, u'UIUC2017工学', CurUserName)
+        sleep(0.2)
         pullMembersMore(msg, u'UIUC2017文理', CurUserName)
+        sleep(0.2)
     elif "3" in msgText:
         pullMembersMore(msg, u'UIUC ECE找队友', CurUserName)
+        sleep(0.2)
         pullMembersMore(msg, u'UIUC CS找队友2', CurUserName)
+        sleep(0.2)
     elif "4" in msgText:
         pullMembersMore(msg, u'UIUC CS刷题', CurUserName)
+        sleep(0.2)
         pullMembersMore(msg, u'17暑假', CurUserName)
+        sleep(0.2)
         pullMembersMore(msg, u'UI食神', CurUserName)
+        sleep(0.2)
     elif "5" in msgText:
         pullMembersMore(msg, u'天天refer', CurUserName)
+        sleep(0.2)
         pullMembersMore(msg, u'UIUC狼人杀', CurUserName)
+        sleep(0.2)
         pullMembersMore(msg, u'UIUC手机', CurUserName)
+        sleep(0.2)
     else:
         itchat.send_msg(vT, CurUserName)
 
