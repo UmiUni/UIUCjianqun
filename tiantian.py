@@ -17,7 +17,7 @@ v1= u"回复 1 加UIUC会计、经济、ECE大家庭;\n"
 v2= u"回复 2 加UIUC工学、商学、文理学毕业通讯录;\n"
 v3= u"回复 3 加UIUC ECE、CS找队友群;\n"
 v4= u"回复 4 加UIUC功能群:刷题面试;暑期留守儿童;食神带飞;\n"
-v5= u"信用卡爱好者;找朋友;UIUC手机family plan.\n";
+v5= u"回复 5 加信用卡爱好者;找朋友;UIUC手机family plan.\n";
 vT =v0+v1+v2+v3+v4
 #Chaoran userid:@ef633e828340000b5518a18f66daefbf8f307a1fa96d405288a885014d8c25d5
 #汪灵欣 userid:@eb21513f32b62cd9773abc2fd5531ee05ca09af4ca926fbf896d8c89f29e46cc
