@@ -18,8 +18,9 @@ v2= u"回复 2 加UIUC工学、商学、文理学毕业通讯录;\n"
 v3= u"回复 3 加UIUC ECE、CS找队友群;\n"
 v4= u"回复 4 加UIUC功能群:刷题面试;暑期留守儿童;食神带飞;\n"
 v5= u"回复 5 加信用卡爱好者;找朋友;UIUC手机family plan.\n";
-v6= u"回复 6 加UIUC租房群"
-vT =v0+v1+v2+v3+v4+v5+v6
+v6= u"回复 6 加UIUC租房群;玉米地小球俱乐部"
+v7= u"回复 7 加finding yingying群，大家一起帮助寻找~"
+vT =v0+v1+v2+v3+v4+v5+v6+v7
 #Chaoran userid:@ef633e828340000b5518a18f66daefbf8f307a1fa96d405288a885014d8c25d5
 #汪灵欣 userid:@eb21513f32b62cd9773abc2fd5531ee05ca09af4ca926fbf896d8c89f29e46cc
 #groups= {'@@6cdcfcb7dc00e7d546464ba702151143e1bf4aa9f72aa6e2559b86469e9a2481':'天天VIP','@@0515f86f31ec80ce4d4238a9ada8fdc0dd0900cc017f87c17df8ee49fb6d4663':'雷孙王'}
@@ -121,6 +122,11 @@ def tuling_reply(msg):
         sleep(0.5)
     elif "6" in msgText:
         pullMembersMore(msg, u'UIUC天天租房', CurUserName)
+        sleep(0.5)
+        pullMembersMore(msg, u'玉米地小球', CurUserName)
+        sleep(0.5)
+    elif "7" in msgText:
+        pullMembersMore(msg, u'finding', CurUserName)
         sleep(0.5)
     else:
         itchat.send_msg(vT, CurUserName)
