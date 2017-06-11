@@ -126,7 +126,7 @@ def tuling_reply(msg):
         pullMembersMore(msg, u'玉米地小球', CurUserName)
         sleep(0.5)
     elif "7" in msgText:
-        pullMembersMore(msg, u'finding', CurUserName)
+        pullMembersMore(msg, u'Finding', CurUserName)
         sleep(0.5)
     else:
         itchat.send_msg(vT, CurUserName)
