@@ -34,13 +34,15 @@ def getName(chatroomName):
     #print(json.dumps(cur_chatrooms)+"\n")
     return detailedChatroom["UserName"]
 
-groups={}
+groupsBroadcast={}
+groupsReceive={}
 #groups[getName(u'天天VIP')] = u'天天VIP'
 #groups[getName(u'雷孙王')] = u'雷孙王'
 #groups[getName(u'UIUC 万能总群2')] = u'万能总群2'
 #groups[getName(u'UIUC 万能总群3')] = u'万能总群3'
-groups[getName(u'UIUC CS刷题小分队')] = u'UIUC刷题小分队'
-groups[getName(u'天天刷题')] = u'天天刷题'
+
+#groupsBroadcast[getName(u'Finding Yingying')] = u'Finding 莹颖群1'
+#groupsReceive[getName(u'Finding 莹颖群2')] = u'Finding 莹颖群2'
 
 @itchat.msg_register('Friends')
 def add_friend(msg):
@@ -126,7 +128,7 @@ def tuling_reply(msg):
         pullMembersMore(msg, u'玉米地小球', CurUserName)
         sleep(0.5)
     elif "7" in msgText:
-        pullMembersMore(msg, u'Finding', CurUserName)
+        pullMembersMore(msg, u'Finding 莹颖群2', CurUserName)
         sleep(0.5)
     else:
         itchat.send_msg(vT, CurUserName)
@@ -190,26 +192,24 @@ def text_reply(msg):
             # 消息来自于需要同步消息的群聊
             #print("prepare send0:")
             #print(json.dumps(groups))
-            if source in groups:    
+            if source in groupsBroadcast:    
                 #print("prepare send1:")            
                 # 转发到其他需要同步消息的群聊
                 #print(source)
-                for item in groups.keys():
-                    if not item == source:
+                for item in groupsReceive.keys():
                         # groups[source]: 消息来自于哪个群聊
                         # msg['ActualNickName']: 发送者的名称
                         # msg['Content']: 文本消息内容
                         # item: 需要被转发的群聊ID
                         #print("prepare send2:")
-                        itchat.send('%s: %s:\n%s' % (groups[source], msg['ActualNickName'], msg['Content']), item)
+                        itchat.send('%s: %s:\n%s' % (groupsBroadcast[source], msg['ActualNickName'], msg['Content']), item)
         # 处理分享消息
         elif msg['Type'] == SHARING:
-            if source in groups:
-                for item in groups.keys():
-                    if not item == source:
+            if source in groupsBroadcast:
+                for item in groupsReceive.keys():
                         # msg['Text']: 分享的标题
                         # msg['Url']: 分享的链接
-                        itchat.send('%s: %s:\n%s\n%s' % (groups[source], msg['ActualNickName'], msg['Text'], msg['Url']), item)
+                        itchat.send('%s: %s:\n%s\n%s' % (groupsBroadcast[source], msg['ActualNickName'], msg['Text'], msg['Url']), item)
 
 # 处理图片和视频类消息
 @itchat.msg_register([PICTURE, VIDEO], isGroupChat=True)
@@ -217,13 +217,12 @@ def group_reply_media(msg):
     source = msg['FromUserName']
     #print("source:"+source)
     # 下载图片或视频
-    if source in groups:
+    if source in groupsBroadcast:
         #print(source)
         msg['Text'](msg['FileName'])
-        for item in groups.keys():
-            if not item == source:
+        for item in groupsReceive.keys():
                 # 将图片或视频发送到其他需要同步消息的群聊
-                itchat.send('%s: %s:' % (groups[source], msg['ActualNickName']), item)
+                itchat.send('%s: %s:' % (groupsBroadcast[source], msg['ActualNickName']), item)
                 itchat.send('@%s@%s' % ({'Picture': 'img', 'Video': 'vid'}.get(msg['Type'], 'fil'), msg['FileName']), item)
 '''
 def updateChatroom(chatroomName):
