@@ -23,8 +23,8 @@ v7= u"回复 7 加finding yingying群，大家一起帮助寻找~"
 vT =v0+v1+v2+v3+v4+v5+v6+v7
 #Chaoran userid:@ef633e828340000b5518a18f66daefbf8f307a1fa96d405288a885014d8c25d5
 #汪灵欣 userid:@eb21513f32b62cd9773abc2fd5531ee05ca09af4ca926fbf896d8c89f29e46cc
-#groups= {'@@6cdcfcb7dc00e7d546464ba702151143e1bf4aa9f72aa6e2559b86469e9a2481':'天天VIP','@@0515f86f31ec80ce4d4238a9ada8fdc0dd0900cc017f87c17df8ee49fb6d4663':'雷孙王'}
-#groups= {'@@d8b03e5ed3d34267d563c552a33af7b975e7375dd0a0499965292b2621fdee40':'万能总群2','@@8bd479db2f43c6e2bf8ba14caf6cb2297dd0bf66235e88760457ef9d2d323dd2':'万能总群3'}
+groups= {'@@6cdcfcb7dc00e7d546464ba702151143e1bf4aa9f72aa6e2559b86469e9a2481':'天天VIP','@@0515f86f31ec80ce4d4238a9ada8fdc0dd0900cc017f87c17df8ee49fb6d4663':'雷孙王'}
+groups= {'@@d8b03e5ed3d34267d563c552a33af7b975e7375dd0a0499965292b2621fdee40':'万能总群2','@@8bd479db2f43c6e2bf8ba14caf6cb2297dd0bf66235e88760457ef9d2d323dd2':'万能总群3'}
 # 收到好友邀请自动添加好友
 
 def getName(chatroomName):
