@@ -20,6 +20,7 @@ v4= u"回复 4 加UIUC功能群:刷题面试;暑期留守儿童;\n"
 v5= u"回复 5 找朋友;UIUC手机family plan.\n";
 v6= u"回复 6 加UIUC租房群;玉米地小球俱乐部\n"
 v7= u"回复 7 加finding yingying群，大家一起帮助寻找~\n"
+v8= u"回复 8 加UIUC行李保管中美互运群\n"
 vT =v0+v1+v2+v3+v4+v5+v6+v7
 #Chaoran userid:@ef633e828340000b5518a18f66daefbf8f307a1fa96d405288a885014d8c25d5
 #汪灵欣 userid:@eb21513f32b62cd9773abc2fd5531ee05ca09af4ca926fbf896d8c89f29e46cc
@@ -93,8 +94,6 @@ def tuling_reply(msg):
         sleep(0.5)
         pullMembersMore(msg, u'UIUC2017经济系', CurUserName)
         sleep(0.5)
-        pullMembersMore(msg, u'UIUC ECE大家庭', CurUserName)
-        sleep(0.5)
     elif "2" in msgText:
         pullMembersMore(msg, u'天天Hao', CurUserName)
         sleep(0.5)
@@ -122,6 +121,9 @@ def tuling_reply(msg):
         sleep(0.5)
     elif "7" in msgText:
         pullMembersMore(msg, u'Finding 莹颖群2', CurUserName)
+        sleep(0.5)
+    elif "8" in msgText:
+        pullMembersMore(msg, u'UIUC行李', CurUserName)
         sleep(0.5)
     else:
         itchat.send_msg(vT, CurUserName)
