@@ -14,17 +14,17 @@ itchat.get_chatrooms(update=True)
 
 v0= u"您好，😊UIUC加群建群小助手😊为您服务～\n"
 v1= u"回复 1 加UIUC会计、经济、ECE大家庭;\n"
-v2= u"回复 2 加UIUC工学、商学、文理学毕业通讯录;\n"
+v2= u"回复 2 加亚马逊免费物品群、食神带飞群;\n"
 v3= u"回复 3 加UIUC ECE、CS找队友群;\n"
-v4= u"回复 4 加UIUC功能群:刷题面试;暑期留守儿童;食神带飞;\n"
-v5= u"回复 5 加信用卡爱好者;找朋友;UIUC手机family plan.\n";
+v4= u"回复 4 加UIUC功能群:刷题面试;暑期留守儿童;\n"
+v5= u"回复 5 找朋友;UIUC手机family plan.\n";
 v6= u"回复 6 加UIUC租房群;玉米地小球俱乐部\n"
-v7= u"回复 7 加finding yingying群，大家一起帮助寻找~"
+v7= u"回复 7 加finding yingying群，大家一起帮助寻找~\n"
 vT =v0+v1+v2+v3+v4+v5+v6+v7
 #Chaoran userid:@ef633e828340000b5518a18f66daefbf8f307a1fa96d405288a885014d8c25d5
 #汪灵欣 userid:@eb21513f32b62cd9773abc2fd5531ee05ca09af4ca926fbf896d8c89f29e46cc
-groups= {'@@6cdcfcb7dc00e7d546464ba702151143e1bf4aa9f72aa6e2559b86469e9a2481':'天天VIP','@@0515f86f31ec80ce4d4238a9ada8fdc0dd0900cc017f87c17df8ee49fb6d4663':'雷孙王'}
-groups= {'@@d8b03e5ed3d34267d563c552a33af7b975e7375dd0a0499965292b2621fdee40':'万能总群2','@@8bd479db2f43c6e2bf8ba14caf6cb2297dd0bf66235e88760457ef9d2d323dd2':'万能总群3'}
+#groups= {'@@6cdcfcb7dc00e7d546464ba702151143e1bf4aa9f72aa6e2559b86469e9a2481':'天天VIP','@@0515f86f31ec80ce4d4238a9ada8fdc0dd0900cc017f87c17df8ee49fb6d4663':'雷孙王'}
+#groups= {'@@d8b03e5ed3d34267d563c552a33af7b975e7375dd0a0499965292b2621fdee40':'万能总群2','@@8bd479db2f43c6e2bf8ba14caf6cb2297dd0bf66235e88760457ef9d2d323dd2':'万能总群3'}
 # 收到好友邀请自动添加好友
 
 def getName(chatroomName):
@@ -40,9 +40,8 @@ groupsReceive={}
 #groups[getName(u'雷孙王')] = u'雷孙王'
 #groups[getName(u'UIUC 万能总群2')] = u'万能总群2'
 #groups[getName(u'UIUC 万能总群3')] = u'万能总群3'
-
-#groupsBroadcast[getName(u'Finding Yingying')] = u'Finding 莹颖群1'
-#groupsReceive[getName(u'Finding 莹颖群2')] = u'Finding 莹颖群2'
+groupsBroadcast[getName(u'Finding Yingying')] = u'Finding 莹颖群1'
+groupsReceive[getName(u'Finding 莹颖群2')] = u'Finding 莹颖群2'
 
 @itchat.msg_register('Friends')
 def add_friend(msg):
@@ -97,11 +96,9 @@ def tuling_reply(msg):
         pullMembersMore(msg, u'UIUC ECE大家庭', CurUserName)
         sleep(0.5)
     elif "2" in msgText:
-        pullMembersMore(msg, u'UIUC2017商学', CurUserName)
+        pullMembersMore(msg, u'天天Hao', CurUserName)
         sleep(0.5)
-        pullMembersMore(msg, u'UIUC2017工学', CurUserName)
-        sleep(0.5)
-        pullMembersMore(msg, u'UIUC2017文理', CurUserName)
+        pullMembersMore(msg, u'UI食神', CurUserName)
         sleep(0.5)
     elif "3" in msgText:
         pullMembersMore(msg, u'UIUC ECE找队友', CurUserName)
@@ -113,11 +110,7 @@ def tuling_reply(msg):
         sleep(0.5)
         pullMembersMore(msg, u'17暑假', CurUserName)
         sleep(0.5)
-        pullMembersMore(msg, u'UI食神', CurUserName)
-        sleep(0.5)
     elif "5" in msgText:
-        pullMembersMore(msg, u'天天refer', CurUserName)
-        sleep(0.5)
         pullMembersMore(msg, u'UIUC狼人杀', CurUserName)
         sleep(0.5)
         pullMembersMore(msg, u'UIUC手机', CurUserName)
