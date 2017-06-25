@@ -41,8 +41,8 @@ groupsReceive={}
 #groups[getName(u'雷孙王')] = u'雷孙王'
 #groups[getName(u'UIUC 万能总群2')] = u'万能总群2'
 #groups[getName(u'UIUC 万能总群3')] = u'万能总群3'
-groupsBroadcast[getName(u'Finding Yingying')] = u'Finding 莹颖群1'
-groupsReceive[getName(u'Finding 莹颖群2')] = u'Finding 莹颖群2'
+#groupsBroadcast[getName(u'Finding Yingying')] = u'Finding 莹颖群1'
+#groupsReceive[getName(u'Finding 莹颖群2')] = u'Finding 莹颖群2'
 
 @itchat.msg_register('Friends')
 def add_friend(msg):
@@ -120,7 +120,7 @@ def tuling_reply(msg):
         pullMembersMore(msg, u'玉米地小球', CurUserName)
         sleep(0.5)
     elif "7" in msgText:
-        pullMembersMore(msg, u'Finding 莹颖群2', CurUserName)
+        pullMembersMore(msg, u'Finding莹颖群2', CurUserName)
         sleep(0.5)
     elif "8" in msgText:
         pullMembersMore(msg, u'UIUC行李', CurUserName)
