@@ -15,7 +15,7 @@ itchat.get_chatrooms(update=True)
 v0= u"您好，😊UIUC加群建群小助手😊为您服务～\n"
 vv0= u"回复 0 加北美母婴总群;北美CPA,REG天天刷题群\n"
 v1= u"回复 1 加UIUC会计、经济大家庭;\n"
-v2= u"回复 2 加食神带飞群;\n"
+v2= u"回复 2 加天天健身北美总群;加食神带飞群;\n"
 v3= u"回复 3 加UIUC ECE、CS找队友群;\n"
 v4= u"回复 4 加UIUC功能群:刷题面试;暑期留守儿童;\n"
 v5= u"回复 5 找朋友;UIUC手机family plan.\n";
@@ -104,6 +104,8 @@ def tuling_reply(msg):
     elif "2" in msgText:
         #pullMembersMore(msg, u'天天Hao', CurUserName)
         #sleep(0.5)
+        pullMembersMore(msg, u'天天健身', CurUserName)
+        sleep(0.5)
         pullMembersMore(msg, u'UI食神', CurUserName)
         sleep(0.5)
     elif "3" in msgText:
