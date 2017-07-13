@@ -14,7 +14,7 @@ itchat.get_chatrooms(update=True)
 
 v0= u"您好，😊UIUC加群建群小助手😊为您服务～\n"
 vv0= u"回复 0 加北美母婴总群;北美CPA,REG天天刷题群\n"
-v1= u"回复 1 加UIUC会计、经济大家庭;\n"
+v1= u"回复 1 加UIUC会计、经济大家庭;北美信用卡爱好者;\n"
 v2= u"回复 2 加天天健身北美总群;加食神带飞群;\n"
 v3= u"回复 3 加UIUC ECE、CS找队友群;\n"
 v4= u"回复 4 加UIUC功能群:刷题面试;暑期留守儿童;\n"
@@ -91,15 +91,17 @@ def tuling_reply(msg):
     else:
         usersDict[CurUserName] = 1
     msgText = msg['Text']
-    if "0" in msgText:
+    if "0" in msgText and ("10" not in msgText):
         pullMembersMore(msg, u'北美妈妈母婴', CurUserName)
         sleep(0.5)
         pullMembersMore(msg, u'北美CPA', CurUserName)
         sleep(0.5)
     elif "1" in msgText:
-        pullMembersMore(msg, u'UIUC2017会计系', CurUserName)
-        sleep(0.5)
+        #pullMembersMore(msg, u'UIUC2017会计系', CurUserName)
+        #sleep(0.5)
         pullMembersMore(msg, u'UIUC2017经济系', CurUserName)
+        sleep(0.5)
+        pullMembersMore(msg, u'北美信用卡', CurUserName)
         sleep(0.5)
     elif "2" in msgText:
         #pullMembersMore(msg, u'天天Hao', CurUserName)
@@ -141,6 +143,9 @@ def tuling_reply(msg):
     elif "9" in msgText:
         pullMembersMore(msg, u'UIUC二手车', CurUserName)
         sleep(0.5)
+        pullMembersMore(msg, u'UIUC宠物群', CurUserName)
+        sleep(0.5)
+    elif "10" in msgText:
         pullMembersMore(msg, u'UIUC宠物群', CurUserName)
         sleep(0.5)
     else:
