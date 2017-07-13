@@ -177,6 +177,7 @@ def text_reply(msg):
             msg.user.send(u'%s' % (replyS+'~想进群加我😊'))
         else:
             msg.user.send(u'@%s\u2005%s' % (msg.actualNickName, replyS+'~想进群加我😊'))
+    '''
     '''  
     ###超级广告###
     if not msg.isAt:
@@ -197,6 +198,7 @@ def text_reply(msg):
             freq[groudID] = 1
             print("groundID"+str(groudID)+ "\n")
             print("frequency"+ str(freq[groudID])+ "\n")
+    '''
     '''
         #if((' ' in msgS) == True):
         #msgS = msgS.split(' ', 1)[1]
