@@ -23,7 +23,8 @@ v6= u"回复 6 加UIUC租房群;玉米地小球俱乐部\n"
 v7= u"回复 7 加finding yingying群，大家一起帮助寻找~;UIUC天天carpool群\n"
 v8= u"回复 8 加UIUC行李保管中美互运群, UIUC统计群\n"
 v9= u"回复 9 加UIUC二手车群.UIUC宠物群🐱🐶🦆🐻🐷\n"
-vT =v0+vv0+v1+v2+v3+v4+v5+v6+v7+v8+v9
+v10= u"回复 10 加UIUC二手车群.UIUC宠物群🐱🐶🦆🐻🐷\n"
+vT =v0+vv0+v1+v2+v3+v4+v5+v6+v7+v8+v9+v10
 #Chaoran userid:@ef633e828340000b5518a18f66daefbf8f307a1fa96d405288a885014d8c25d5
 #汪灵欣 userid:@eb21513f32b62cd9773abc2fd5531ee05ca09af4ca926fbf896d8c89f29e46cc
 #groups= {'@@6cdcfcb7dc00e7d546464ba702151143e1bf4aa9f72aa6e2559b86469e9a2481':'天天VIP','@@0515f86f31ec80ce4d4238a9ada8fdc0dd0900cc017f87c17df8ee49fb6d4663':'雷孙王'}
@@ -146,7 +147,7 @@ def tuling_reply(msg):
         pullMembersMore(msg, u'UIUC宠物群', CurUserName)
         sleep(0.5)
     elif "10" in msgText:
-        pullMembersMore(msg, u'UIUC宠物群', CurUserName)
+        pullMembersMore(msg, u'线上KTV', CurUserName)
         sleep(0.5)
     else:
         itchat.send_msg(vT, CurUserName)
