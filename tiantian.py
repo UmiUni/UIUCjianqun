@@ -161,7 +161,7 @@ def pullMembersMore(msg, chatroomName, CurUserName):
     #print(chatRoomUserName + "\n")
     #print(CurUserName+ "\n")
     r = itchat.add_member_into_chatroom(chatRoomUserName,[{'UserName':CurUserName}],useInvitation=True)
-
+'''
 #@itchat.msg_register([TEXT, SHARING], isGroupChat=True)
 @itchat.msg_register(TEXT, isGroupChat=True)
 def text_reply(msg):
@@ -245,6 +245,7 @@ def group_reply_media(msg):
                 # 将图片或视频发送到其他需要同步消息的群聊
                 itchat.send('%s: %s:' % (groupsBroadcast[source], msg['ActualNickName']), item)
                 itchat.send('@%s@%s' % ({'Picture': 'img', 'Video': 'vid'}.get(msg['Type'], 'fil'), msg['FileName']), item)
+'''
 '''
 def updateChatroom(chatroomName):
     cur_chatrooms = itchat.search_chatrooms(name=u'UIUC租房3群')
