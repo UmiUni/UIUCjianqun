@@ -128,14 +128,14 @@ def tuling_reply(msg):
         pullMembersMore(msg, u'UIUC手机', CurUserName)
         sleep(0.5)
     elif "6" in msgText:
-        pullMembersMore(msg, u'UIUC天天租房', CurUserName)
+        pullMembersMore(msg, u'UIUC租房天天', CurUserName)
         sleep(0.5)
         pullMembersMore(msg, u'玉米地小球', CurUserName)
         sleep(0.5)
     elif "7" in msgText:
         pullMembersMore(msg, u'找莹颖群', CurUserName)
         sleep(0.5)
-        pullMembersMore(msg, u'UIUC天天carpool', CurUserName)
+        pullMembersMore(msg, u'UIUCcarpool', CurUserName)
         sleep(0.5)
     elif "8" in msgText:
         pullMembersMore(msg, u'UIUC行李', CurUserName)
@@ -150,7 +150,7 @@ def tuling_reply(msg):
     elif "10" in msgText:
         pullMembersMore(msg, u'线上KTV', CurUserName)
         sleep(0.5)
-        pullMembersMore(msg, u'天天UIUC二手', CurUserName)
+        pullMembersMore(msg, u'香槟二手交易群天天', CurUserName)
         sleep(0.5)
     sleep(0.5)
     itchat.send_msg(vT, CurUserName)
