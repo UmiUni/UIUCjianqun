@@ -88,6 +88,7 @@ def tuling_reply(msg):
         usersDict[CurUserName] = usersDict[CurUserName] + 1
         if(usersDict[CurUserName] >= 10):
             itchat.send_msg(u'您已达到今日加群上限，请明日再来～😊天天😊', CurUserName)
+        elif(usersDict[CurUserName] >= 12):
             return
     else:
         usersDict[CurUserName] = 1
@@ -151,8 +152,9 @@ def tuling_reply(msg):
         sleep(0.5)
         pullMembersMore(msg, u'天天UIUC二手', CurUserName)
         sleep(0.5)
-    else:
-        itchat.send_msg(vT, CurUserName)
+    sleep(0.5)
+    itchat.send_msg(vT, CurUserName)
+    sleep(0.5)
 
 def pullMembersMore(msg, chatroomName, CurUserName):
     cur_chatrooms = itchat.search_chatrooms(name=chatroomName)
@@ -166,19 +168,15 @@ def pullMembersMore(msg, chatroomName, CurUserName):
 @itchat.msg_register(TEXT, isGroupChat=True)
 def text_reply(msg):
     msgS = msg.text
-    '''
     print(msg['isAt'])
     print(msg['ActualNickName'])
     print(msg['Content'])
-    '''
     if "@UIUC加群建群小助手" in msg['Content']:
         replyS = get_response(msgS)
         if msg.actualNickName.count("@")>=2:
             msg.user.send(u'%s' % (replyS+'~想进群加我😊'))
         else:
             msg.user.send(u'@%s\u2005%s' % (msg.actualNickName, replyS+'~想进群加我😊'))
-    '''
-    '''  
     ###超级广告###
     if not msg.isAt:
         groudIDOrigin = msg['FromUserName']
@@ -198,8 +196,6 @@ def text_reply(msg):
             freq[groudID] = 1
             print("groundID"+str(groudID)+ "\n")
             print("frequency"+ str(freq[groudID])+ "\n")
-    '''
-    '''
         #if((' ' in msgS) == True):
         #msgS = msgS.split(' ', 1)[1]
         
