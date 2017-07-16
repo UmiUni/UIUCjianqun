@@ -183,7 +183,7 @@ def text_reply(msg):
     if msg['ActualNickName']=="超然":
       content = msg['Content']
       if(content[0]=="@"):
-        arr = content.split()
+        arr = content.rsplit()
         if "广告" in arr[1]:
           delUser = searchUser(msg['User']['MemberList'],arr[0])
           itchat.delete_member_from_chatroom(msg['FromUserName'],[{'UserName':delUser}])
