@@ -45,6 +45,7 @@ def sendGroupInviteMsg(msg,CurUserName):
 #if group chat msg contains kick ads, start kicking logic
 @itchat.msg_register(TEXT, isGroupChat=True)
 def text_reply(msg):
+    #print msg
     if u'超然' in msg['ActualNickName']:
       content = msg['Content']
       if(content[0]=="@"):

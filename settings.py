@@ -15,7 +15,8 @@ def init():
   u'找莹颖群',u'UIUCcarpool',
   u'UIUC行李',u'UIUC统计',
   u'UIUC二手车',u'UIUC宠物群',
-  u'线上KTV',u'香槟二手交易群天天'
+  u'线上KTV',u'香槟二手交易群天天',
+  u'小助手测试群0',u'小助手测试群1'
   ]
 
   v0= u"您好，😊 UIUC加群建群小助手😊 为您服务～\n"
