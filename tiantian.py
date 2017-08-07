@@ -46,7 +46,8 @@ def sendGroupInviteMsg(msg,CurUserName):
 @itchat.msg_register(TEXT, isGroupChat=True)
 def text_reply(msg):
     #print msg
-    if u'超然' in msg['ActualNickName']:
+    #if u'超然群主233' in msg['ActualNickName']:
+    if u'@774514af2f79102d03828205cc9b3c77926b8643fa75749be3a5082cf6149917' in msg['ActualUserName']:
       content = msg['Content']
       if(content[0]=="@"):
         if u'广告' in content:
