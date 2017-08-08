@@ -20,6 +20,7 @@ def init():
   ]
 
   v0= u"您好，😊 UIUC加群建群小助手😊 为您服务～\n"
+  v00=u"每天只能加3个群哦;\n" 
   vv0= u"回复 0 加北美母婴总群;北美CPA,REG天天刷题群\n"
   v1= u"回复 1 加UIUC会计、经济大家庭;北美信用卡爱好者;\n"
   v2= u"回复 2 加天天健身北美总群;加食神带飞群;\n"
@@ -31,7 +32,7 @@ def init():
   v8= u"回复 8 加UIUC行李保管中美互运群, UIUC统计群\n"
   v9= u"回复 9 加UIUC二手车群.UIUC宠物群🐱 🐶 🦆🐻  🐷 \n"
   v10= u"回复 10 加线上KTV开嗓🎙️北美总群;UIUC二手货群\n"
-  vT =v0+vv0+v1+v2+v3+v4+v5+v6+v7+v8+v9+v10
+  vT =v0+v00+vv0+v1+v2+v3+v4+v5+v6+v7+v8+v9+v10
 
   usersDict = {}
   admins =[]
