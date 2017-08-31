@@ -34,7 +34,7 @@ def init():
   v9= u"回复 9 加UIUC二手车群.UIUC宠物群🐱 🐶 🦆🐻  🐷 \n"
   v10= u"回复 10 加线上KTV开嗓🎙️北美总群;UIUC二手货群\n"
   v11= u"回复 11 加UI食神带飞群;17秋季香槟托儿所\n"
-  vT =v0+v00+vv0+v1+v2+v3+v4+v5+v6+v7+v8+v9+v10
+  vT =v0+v00+vv0+v1+v2+v3+v4+v5+v6+v7+v8+v9+v10+v11
 
   usersDict = {}
   admins =[]
