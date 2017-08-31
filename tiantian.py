@@ -38,7 +38,7 @@ def sendGroupInviteMsg(msg,CurUserName):
   x = re.findall(r'\d+', msgText)
   if(len(x) >0):
     y= int(x[0])
-    if(y>=0 and y<=10):
+    if(y>=0 and y<=11):
       pullMembersMore(msg, settings.chatGroups[y*2], CurUserName)
       sleep(0.5)
       pullMembersMore(msg, settings.chatGroups[y*2+1], CurUserName)
