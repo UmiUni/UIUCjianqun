@@ -38,11 +38,12 @@ def sendGroupInviteMsg(msg,CurUserName):
   x = re.findall(r'\d+', msgText)
   if(len(x) >0):
     y= int(x[0])
-    if(y>=0 and y<=11):
+    if(y>=0 and y<=12):
       pullMembersMore(msg, settings.chatGroups[y*2], CurUserName)
       sleep(0.5)
-      pullMembersMore(msg, settings.chatGroups[y*2+1], CurUserName)
-      sleep(0.5)
+      if(y<12):
+        pullMembersMore(msg, settings.chatGroups[y*2+1], CurUserName)
+        sleep(0.5)
       settings.usersDict[CurUserName] = settings.usersDict[CurUserName] + 1
   itchat.send_msg(settings.vT, CurUserName)
   sleep(0.5)
