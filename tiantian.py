@@ -7,7 +7,7 @@ import json
 import time
 from time import sleep
 import settings
-from xiaozhushou_util import *
+from xiaozhushou_util.xiaozhushou_util import *
 import re
 reload(sys)  
 sys.setdefaultencoding('utf8')
@@ -45,6 +45,8 @@ def sendGroupInviteMsg(msg,CurUserName):
         pullMembersMore(msg, settings.chatGroups[y*2+1], CurUserName)
         sleep(0.5)
       settings.usersDict[CurUserName] = settings.usersDict[CurUserName] + 1
+    elif(y==99):
+      advertiseQR(CurUserName)
   itchat.send_msg(settings.vT, CurUserName)
   sleep(0.5)
 
@@ -55,7 +57,7 @@ def text_reply(msg):
       content = msg['Content']
       if(content[0]=="@"):
         if u'广告' in content:
-          delUser(msg['FromUserName'],content)
+          delUser(msg['FromUserName'],content,settings.ADMIN)
 
 itchat.run() 
 
