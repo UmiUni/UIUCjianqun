@@ -37,7 +37,7 @@ def init():
   v10= u"回复 10 加线上KTV开嗓🎙️北美总群;UIUC二手货群\n"
   v11= u"回复 11 加UI食神带飞群;17秋季香槟托儿所\n"
   v12= u"回复 12 加北美表情分享总群\n"
-  v13= u"回复 99 查看【北美加群小助手Jogchat.com】\n"
+  v13= u"回复 99 查看【北美加群小助手Jogchat.com】微信小程序二维码\n"
   vT =v0+v00+vv0+v1+v2+v3+v4+v5+v6+v7+v8+v9+v10+v11+v12+v13
 
   usersDict = {}
