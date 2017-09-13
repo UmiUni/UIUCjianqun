@@ -11,7 +11,7 @@ def init():
   u'UIUC租房群',u'UIUC狼人杀',
   u'UIUC二手车',u'UIUC宠物群',
   u'UIUC ECE大家庭',u'UIUC CS大家庭',
-  u'UIUC2017经济系',u'北美信用卡',
+  u'UIUC经济',u'北美信用卡',
   u'玉米地小球',u'UIUC统计',
   u'UI食神',u'17秋季香槟托儿',
   u'北美表情分享'
