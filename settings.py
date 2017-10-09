@@ -1,14 +1,16 @@
 # -*- coding: UTF-8 -*-
+import datetime
 def init():
   global admins
   global chatGroups
   global vT
   global usersDict
   global ADMIN
+  global previousDay
 
   chatGroups =[
   u'UIUC二手交易群',u'线上KTV',
-  u'UIUC租房群',u'UIUC狼人杀',
+  u'UIUC租房群',u'UIUC内推找工作',
   u'UIUC二手车',u'UIUC宠物群',
   u'UIUC ECE大家庭',u'UIUC CS大家庭',
   u'UIUC经济',u'北美信用卡',
@@ -27,7 +29,7 @@ def init():
   v0= u"您好，😊 UIUC加群建群小助手😊 为您服务～\n"
   v00=u"每天只能加4个群哦;\n" 
   v1= u"回复 0 加UIUC二手交易群;线上KTV开嗓🎙️北美总群;\n"
-  v2= u"回复 1 加UIUC租房群;UIUC狼人杀;\n";
+  v2= u"回复 1 加UIUC租房群;UIUC内推找工作群;\n";
   v3= u"回复 2 加UIUC二手车群;UIUC宠物群🐱 🐶 🦆🐻  🐷 \n"
   v4= u"回复 3 加UIUC ECE大家庭；UIUC CS大家庭;\n"
   v5= u"回复 4 加UIUC经济系大家庭;北美信用卡爱好者;\n"
@@ -45,3 +47,4 @@ def init():
   usersDict = {}
   admins =[]
   ADMIN = u'UIUC香槟加群小助手'
+  previousDay = datetime.datetime.now().day
