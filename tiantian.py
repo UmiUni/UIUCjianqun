@@ -41,7 +41,7 @@ def sendGroupInviteMsg(msg,CurUserName):
         return
       pullMembersMore(msg, settings.chatGroups[y*2], CurUserName)
       sleep(0.5)
-      if(y<7):
+      if(y<=7):
         if(preventAbuseTalking(CurUserName)):
           return
         pullMembersMore(msg, settings.chatGroups[y*2+1], CurUserName)
