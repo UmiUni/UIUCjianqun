@@ -12,7 +12,7 @@ def init():
   u'UIUC二手交易群',u'线上KTV',
   u'UIUC租房群',u'UIUC内推找工作',
   u'UIUC二手车',u'UIUC宠物群',
-  u'UIUC ECE大家庭',u'UIUC CS大家庭',
+  u'UIUC ECE大家庭',u'UIUC CS大家庭🌽',
   u'UIUC经济',u'北美信用卡',
   u'玉米地小球',u'UIUC统计',
   u'UI食神',u'17秋季香槟托儿',
