@@ -10,7 +10,7 @@ def init():
 
   chatGroups =[
   u'UIUC二手交易群',u'线上KTV',
-  u'UIUC租房群',u'UIUC内推找工作',
+  u'UIUC租房群2',u'UIUC内推找工作',
   u'UIUC二手车',u'UIUC宠物群',
   u'UIUC ECE大家庭',u'UIUC CS大家庭🌽',
   u'UIUC经济',u'北美信用卡',
