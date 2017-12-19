@@ -15,7 +15,7 @@ def init():
   u'UIUC ECE大家庭',u'UIUC CS大家庭🌽',
   u'UIUC经济',u'北美信用卡',
   u'玉米地小球',u'UIUC统计',
-  u'UI食神',u'17秋季香槟托儿',
+  u'UI食神',u'17寒假香槟托儿',
   u'北美表情分享','2018 UIUC往返芝加哥班车群',
   u'Chuck郭律师','北美CPA',
   u'2018 H1B 中中中'
