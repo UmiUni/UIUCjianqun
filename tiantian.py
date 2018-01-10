@@ -25,7 +25,7 @@ def add_friend(msg):
 def tuling_reply(msg):
   #print msg
   CurUserName = msg['FromUserName']
-  if(u'管理猿加密码' in msg['Content']):
+  if(u'我是UIUC宝宝' in msg['Content']):
     settings.admins.append(CurUserName)  
     itchat.send_msg(u'您已是管理猿',CurUserName)
   sendGroupInviteMsg(msg,CurUserName)
