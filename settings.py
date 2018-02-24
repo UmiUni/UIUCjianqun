@@ -20,7 +20,8 @@ def init():
   u'北美表情分享','2018 UIUC往返芝加哥班车群',
   u'Chuck郭律师','北美CPA',
   u'2018 H1B 中中中',u'北美区块链技术交流总群',
-  u'UIUC春假旅游出行2018',u'UIUC摄影爱好者'
+  u'UIUC春假旅游出行2018',u'UIUC摄影爱好者',
+  u'北美股市Trading技术交流总群1'
   ]
   save = [
     u'北美妈妈母婴', u'北美CPA',
@@ -46,7 +47,8 @@ def init():
   v12= u"回复 99 查看【北美加群小助手Jogchat.com】\n微信公众号二维码加纽约，硅谷，西雅图等群(无限次数)\n\n"
   v13= u"回复 100 加UIUC课程群小助手(无限次数)\n"
   v14= u"回复 101 加UIUC春假旅游出行自由组队群;UIUC摄影爱好者(无限次数)\n"
-  vT =v0+v00+v1+v2+v3+v4+v5+v6+v7+v8+v9+v10+v11+v12+v13+v14
+  v15= u"回复 102 加北美股市Trading技术交流总群1(无次数限制)\n"
+  vT =v0+v00+v1+v2+v3+v4+v5+v6+v7+v8+v9+v10+v11+v12+v13+v14+v15
  
   
   vv0= u"回复 0 加北美母婴总群;北美CPA,REG天天刷题群\n"
@@ -55,5 +57,5 @@ def init():
 
   usersDict = {}
   admins =[]
-  ADMIN = u'UIUC香槟加群小助手'
+  ADMIN = u'UIUC香槟加群小助手jogchat.com'
   previousDay = datetime.datetime.now().day

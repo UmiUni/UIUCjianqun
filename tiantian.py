@@ -55,7 +55,11 @@ def sendGroupInviteMsg(msg,CurUserName):
       sleep(0.5)
     elif(y==101):
       pullMembersMore(msg, settings.chatGroups[11*2], CurUserName)
+      sleep(0.5)
       pullMembersMore(msg, settings.chatGroups[11*2+1], CurUserName)
+      sleep(0.5)
+    elif(y==102):
+      pullMembersMore(msg, settings.chatGroups[12*2], CurUserName)
       sleep(0.5)
 
   itchat.send_msg(settings.vT, CurUserName)
