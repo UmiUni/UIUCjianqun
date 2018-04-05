@@ -22,7 +22,7 @@ def init():
   u'Pokemon Go北美交流总群',u'北美区块链技术交流总群',
   u'UIUC春假旅游出行2018',u'UIUC摄影爱好者',
   u'北美股市Trading技术交流总群1',u'UIUC面试算法找工作-九章算法群',
-  u'加UIUC硕博新生必备干货群',u'UIUC本科新生必备干货群',
+  u'UIUC硕博新生必备干货群',u'UIUC本科新生必备干货群',
   u'UIUC暑期修学分交流群A'
   ]
   save = [
