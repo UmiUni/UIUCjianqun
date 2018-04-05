@@ -54,15 +54,18 @@ def sendGroupInviteMsg(msg,CurUserName):
       advertiseQR1(CurUserName)
       sleep(0.5)
     elif(y==101):
-      pullMembersMore(msg, settings.chatGroups[11*2], CurUserName)
+      pullMembersMore(msg, settings.chatGroups[13*2], CurUserName)
       sleep(0.5)
-      pullMembersMore(msg, settings.chatGroups[11*2+1], CurUserName)
+      pullMembersMore(msg, settings.chatGroups[13*2+1], CurUserName)
       sleep(0.5)
     elif(y==102):
       pullMembersMore(msg, settings.chatGroups[12*2], CurUserName)
       sleep(0.5)
     elif(y==103):
       pullMembersMore(msg, settings.chatGroups[12*2+1], CurUserName)
+      sleep(0.5)
+    elif(y==104):
+      pullMembersMore(msg, settings.chatGroups[14*2], CurUserName)
       sleep(0.5)
 
   itchat.send_msg(settings.vT, CurUserName)
