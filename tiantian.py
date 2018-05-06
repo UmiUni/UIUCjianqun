@@ -36,13 +36,13 @@ def sendGroupInviteMsg(msg,CurUserName):
   x = re.findall(r'\d+', msgText)
   if(len(x) >0):
     y= int(x[0])
-    if(y>=0 and y<=11):
+    if(y>=0 and y<=14):
       if msg['FromUserName'] not in settings.admins:
         if(preventAbuseTalking(CurUserName)):
           return
       pullMembersMore(msg, settings.chatGroups[y*2], CurUserName)
       sleep(0.5)
-      if(y<=10):
+      if(y<=13):
         if(preventAbuseTalking(CurUserName)):
           return
         pullMembersMore(msg, settings.chatGroups[y*2+1], CurUserName)
@@ -54,18 +54,7 @@ def sendGroupInviteMsg(msg,CurUserName):
       advertiseQR1(CurUserName)
       sleep(0.5)
     elif(y==101):
-      pullMembersMore(msg, settings.chatGroups[13*2], CurUserName)
-      sleep(0.5)
-      pullMembersMore(msg, settings.chatGroups[13*2+1], CurUserName)
-      sleep(0.5)
-    elif(y==102):
-      pullMembersMore(msg, settings.chatGroups[12*2], CurUserName)
-      sleep(0.5)
-    elif(y==103):
-      pullMembersMore(msg, settings.chatGroups[12*2+1], CurUserName)
-      sleep(0.5)
-    elif(y==104):
-      pullMembersMore(msg, settings.chatGroups[14*2], CurUserName)
+      pullMembersMore(msg, settings.chatGroups[14*2+1], CurUserName)
       sleep(0.5)
 
   itchat.send_msg(settings.vT, CurUserName)
