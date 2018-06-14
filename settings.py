@@ -26,7 +26,7 @@ def init():
   u'UIUC暑期修学分交流群A',u'UIUC硕博新生必备干货群',
   u'UIUC本科新生必备干货群',
   u'小鹏汽车',
-  u'UIUC 生活tips'
+  u'UIUC 生活tips',
   u'UIUC2018留学就这样'
     ]
   save = [
