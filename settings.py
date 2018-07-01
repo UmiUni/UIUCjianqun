@@ -4,7 +4,7 @@ def init():
   global admins
   global chatGroups
   global vT
-  global v20
+  global v21
   global usersDict
   global ADMIN
   global previousDay
@@ -59,7 +59,8 @@ def init():
   v18= u"回复 101 加小鹏汽车5.6 UIUC校招群(无限次数)\n"
   v19= u"回复 102 加UIUC生活tips干货分享群(无限次数)\n"
   v20= u"回复 103 加 UIUC留学就这样 群(无限次数)\n"
-  vT =v0+v00+v1+v2+v3+v4+v5+v6+v7+v8+v9+v10+v11+v12+v13+v14+v15+v16+v17+v18+v19
+  v21= u"微信自动加群群功能已关，请使用我们的网站[北美加群小助手joghcat.com]加入北美各地区Facebook群组。谢谢😊"
+  vT =v0+v00+v1+v2+v3+v4+v5+v6+v7+v8+v9+v10+v11+v12+v13+v14+v15+v16+v17+v18+v19+v20
  
   
   vv0= u"回复 0 加北美母婴总群;北美CPA,REG天天刷题群\n"

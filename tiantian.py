@@ -20,7 +20,7 @@ settings.init()
 def add_friend(msg):
     itchat.add_friend(**msg['Text'])
     itchat.send_msg(settings.vT, msg['RecommendInfo']['UserName'])
-    itchat.send_msg(settings.v20, msg['RecommendInfo']['UserName'])
+    itchat.send_msg(settings.v21, msg['RecommendInfo']['UserName'])
 
 @itchat.msg_register(itchat.content.TEXT, isGroupChat=False)
 def tuling_reply(msg):
@@ -65,7 +65,7 @@ def sendGroupInviteMsg(msg,CurUserName):
       sleep(0.5)
 
   itchat.send_msg(settings.vT, CurUserName)
-  itchat.send_msg(settings.v20, CurUserName)
+  itchat.send_msg(settings.v21, CurUserName)
   sleep(0.5)
 
 #if group chat msg contains kick ads, start kicking logic
